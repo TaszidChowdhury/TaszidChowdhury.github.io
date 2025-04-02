@@ -18,11 +18,11 @@
 ##############################
 text_skin: dark # "default" (default), "dark", "forest", "ocean", "chocolate", "orange"
 highlight_theme: tomorrow # "default" (default), "tomorrow", "tomorrow-night", "tomorrow-night-eighties", "tomorrow-night-blue", "tomorrow-night-bright"
-url     : # the base hostname & protocol for your site e.g. https://www.someone.com
+url     : https://taszidchowdhury.github.io/ # the base hostname & protocol for your site e.g. https://www.someone.com
 baseurl : # does not include hostname
 title   : Taszid Chowdhury
 description: > # this means to ignore newlines until "Language & timezone"
-  Your Site Description
+  Personal Porfolio | Your Site Description
 
 
 ## => Language and Timezone
@@ -36,8 +36,8 @@ timezone: # see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for
 author:
   type      : person # "person" (default), "organization"
   name      : Taszid Chowdhury
-  url       : 
-  avatar    : # path or url of avatar image (square)
+  url       : https://taszidchowdhury.github.io/
+  avatar    : https://media.licdn.com/dms/image/v2/D4E03AQH7kndKHFJn3w/profile-displayphoto-shrink_800_800/B4EZU1b1hEHcAc-/0/1740358245425?e=1749081600&v=beta&t=oo2RC6OMxZaFWf7zgaBxB0-ywBA37B87rePwpXOrR6I # path or url of avatar image (square)
   bio       : I’m a passionate Computer Science student at Stockton University with a strong interest in DevOps, software development, and cybersecurity. I thrive on solving complex problems and building secure, efficient, and scalable solutions. My journey in tech is driven by curiosity, hands-on experience, and a commitment to continuous learning. Currently, I'm deepening my knowledge in Java, Python, data analytics, and cybersecurity principles. I'm particularly fascinated by how DevOps practices streamline development and how security integrates into every stage of the software lifecycle.
   email     : taszidchowdhury@gmail.com
   facebook  : # "user_name" the last part of your profile url, e.g. https://www.facebook.com/user_name
@@ -55,7 +55,7 @@ author:
 
 ## => GitHub Repository (if the site is hosted by GitHub)
 ##############################
-repository: user_name/repo_name
+repository: TaszidChowdhury/TaszidChowdhury.github.io
 repository_tree: master
 
 
