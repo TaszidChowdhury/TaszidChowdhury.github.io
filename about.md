@@ -25,11 +25,9 @@ titles:
   # @end locale config
 key: page-about
 ---
-## Resume
 
-> **Taszid Chowdhury**  
-📍 New Jersey, USA • 📧 [taszidchowdhury@gmail.com](mailto:taszidchowdhury@gmail.com)  
-🔗 [LinkedIn](https://www.linkedin.com/in/taszid-chowdhury-42a37923b/) • 💻 [GitHub](https://github.com/TaszidChowdhury)
+## Taszid Chowdhury  
+ (609) 541-1149 | [taszidchowdhury@gmail.com](mailto:taszidchowdhury@gmail.com) | [LinkedIn](https://www.linkedin.com/in/taszid-chowdhury-42a37923b/) | [GitHub](https://github.com/TaszidChowdhury) 
 
 ---
 
