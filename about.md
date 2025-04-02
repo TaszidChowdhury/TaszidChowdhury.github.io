@@ -2,7 +2,7 @@
 layout: article
 titles:
   # @start locale config
-  en      : &EN       About
+  en      : &EN       Resume
   en-GB   : *EN
   en-US   : *EN
   en-CA   : *EN
@@ -25,50 +25,76 @@ titles:
   # @end locale config
 key: page-about
 ---
+## Resume
 
-![TeXt Theme](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/TeXt-home.jpg)
+> **Taszid Chowdhury**  
+📍 New Jersey, USA • 📧 [taszidchowdhury@gmail.com](mailto:taszidchowdhury@gmail.com)  
+🔗 [LinkedIn](https://www.linkedin.com/in/taszid-chowdhury-42a37923b/) • 💻 [GitHub](https://github.com/TaszidChowdhury)
 
-TeXt is a super customizable Jekyll theme for personal site, team site, blog, project, documentation, etc. Similar to iOS 11 style, it has large and prominent titles, round buttons and cards.
+---
 
-```javascript
-(() => console.log('Hello, World!'))();
-```
+### Education
 
-## Features
+**Stockton University**, Galloway, NJ  
+**Bachelor of Science in Computer Science** — *GPA: 4.0*  
+*May 2025*  
+*Relevant Courses:*  
+_Data Structures and Algorithms • Software Engineering • Information Assurance and Security_
 
-- Responsive
-- Semantic HTML
-- Skins
-- Highlight Theme
-- Internationalization
-- Search
-- Table of contents
-- Authors
-- Additional styles (alert, tag, image, icon, button, grid, etc)
-- Extensions (audios, videos, slides, demos)
-- Markdown enhancements ([MathJax](https://www.mathjax.org/), [mermaid](https://mermaidjs.github.io/), [chartjs](http://www.chartjs.org/))
-- Sharing ([AddToAny](https://www.addtoany.com/), [AddThis](https://www.addthis.com/))
-- Comments ([Disqus](https://disqus.com/), [Gitalk](https://gitalk.github.io/), [Valine](https://valine.js.org/en/))
-- Pageview ([LeanCloud](https://leancloud.cn/))
-- Analytics ([Google Analytics](https://analytics.google.com/analytics/web/))
-- RSS ([jekyll-feed](https://github.com/jekyll/jekyll-feed))
+---
 
-## Skins
+### Experience
 
-TeXt has 6 built-in skins, you can also set up your own skin.
+**IT Support Specialist**, Stockton University  
+*Jan 2024 – Present*   
+- Provided technical support to university staﬀ and students by troubleshooting hardware and software issues, ensuring timely resolution of technical problems.
+- Assisted in setting up workstations, installing software, and configuring operating systems (Windows, macOS, Linux).
+- Maintained IT equipment inventory and performed basic maintenance to extend hardware lifespan.
+- Delivered excellent customer service through eﬀective communication and problem-solving during user interactions.
+- Collaborated with the IT team to monitor and address network and connectivity issues.
 
-| `default` | `dark` | `forest` |
-| --- |  --- | --- |
-| ![Default](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/skins_default.jpg) | ![Dark](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/skins_dark.jpg) | ![Forest](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/skins_forest.jpg) |
+**Software Engineer Intern**, JPMorgan — *NYC*  
+*May 2024 – Aug 2024*  
+- Demonstrated proficiency in React.js, Java, MySQL, Docker, Jenkins, and Prometheus allowing me to eﬃciently- Created responsive UIs with **HTML5/CSS3/JavaScript**
+- Leveraged **JavaScript, HTML5, and CSS3** to create visually appealing and responsive user interfaces for banking platforms. 
+- Monitored systems using **Prometheus**
+- Orchestrated the setup of automated testing frameworks within **Jenkins CI/CD pipelines**, enhancing application performance consistency and enabling continuous integration processes that supported 25+ successful deployments per month.
 
-| `ocean` | `chocolate` | `orange` |
-| --- |  --- | --- |
-| ![Ocean](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/skins_ocean.jpg) | ![Chocolate](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/skins_chocolate.jpg) | ![Orange](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/skins_orange.jpg) |
+**Sales Advisor**, H&M  
+*July 2022 – Present*  
+- Delivered exceptional customer service by assisting shoppers with product selection and inquiries.  
+- Developed strong communication and problem-solving skills in a fast-paced retail environment.
+- Collaborated with team members to achieve sales goals and maintain a positive shopping experience.
 
-### Highlight Theme
+---
 
-TeXt use [Tomorrow](https://github.com/chriskempson/tomorrow-theme) as the highlight theme.
+### Projects
 
-| `tomorrow` | `tomorrow-night` | `tomorrow-night-eighties` | `tomorrow-night-blue` | `tomorrow-night-bright` |
-| --- |  --- | --- | --- |  --- |
-| ![Tomorrow](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/highlight_tomorrow.png) | ![Tomorrow Night](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/highlight_tomorrow-night.png) | ![Tomorrow Night Eighties](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/highlight_tomorrow-night-eighties.png) | ![Tomorrow Night Blue](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/highlight_tomorrow-night-blue.png) | ![Tomorrow Night Bright](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/highlight_tomorrow-night-bright.png) |
+**AWS VPC Infrastructure Project** – *Interactive Cloud Networking Showcase*  
+- Deployed a **Virtual Private Cloud (VPC)** using **Terraform** on **AWS**, featuring subnets, route tables, NAT, and internet gateways  
+- Documented setup with an interactive **walkthrough website** hosted via **GitHub Pages**  
+- Used **CloudFormation** and visual diagrams to guide users through infrastructure logic  
+- Tech stack includes: **HTML, CSS, JavaScript**, GitHub Pages, AWS CLI  
+🔗 [View Project Repo](https://github.com/TaszidChowdhury/Virtual-Private-Cloud-VPC-)
+
+**Garden State Getaway** – *Vacation Property Rental Website*  
+- Developed using **Flask**, **Python**, **HTML/CSS/JS**  
+- Enhanced SEO, increasing organic traffic by 30%  
+- Implemented booking, account management, and property listings
+
+**FUNI** – *Interactive Financial Planner*  
+- Built tools for budgeting, loan calc, and goal tracking  
+- Managed financial data using **MySQL**  
+- Designed intuitive UI with **JavaScript**, **HTML/CSS**
+
+---
+
+### Technical Skills
+
+**Languages**: Java, Python, HTML, CSS, C, C#, C++  
+**Tools/Tech**: Docker, Jenkins, MySQL, Prometheus  
+**OS**: Windows XP–10, Linux
+
+---
+
+Want the PDF version? [Download My Resume](/assets/files/TaszidC_Resume.pdf)
