@@ -91,7 +91,7 @@ _Data Structures and Algorithms • Software Engineering • Information Assuran
 
 **Languages**: Java, Python, HTML, CSS, C, C#, C++  
 **Tools/Tech**: Docker, Jenkins, MySQL, Prometheus  
-**OS**: Windows XP–10, Linux
+**OS**: Windows XP–10, Linux, Ubuntu
 
 ---
 
