@@ -5,25 +5,25 @@ AOS.init();
 const experiencecards = document.querySelector(".experience-cards");
 const exp = [
   {
-    title: "Software Development Intern",
-    cardImage: "assets/images/experience-page/flipkart.jpg",
-    place: "Flipkart",
-    time: "(May, 2020 - present)",
-    desp: "<li>Worked to migrate Flipkart lite’s product page to AMP pages so that they load up instantly.</li> <li>Made changes in the current progressive web app of Flipkart to react to different actions performed on AMP page.</li> <li>Created a node module called “fk-amp” which abstracts all the files and middlewares and can be easily imported and used from express server.</li>",
+    title: "IT Support Specialist",
+    cardImage: "assets/images/experience-page/STOCKTON.jpg",
+    place: "Stockton University | Galloway, NJ",
+    time: "(January, 2024 - present)",
+    desp: "<li>Provided technical support to university staff and students by troubleshooting hardware and software issues, ensuring timely resolution of technical problems.</li> <li> Assisted in setting up workstations, installing software, and configuring operating systems (Windows, macOS, Linux). </li> <li> Maintained IT equipment inventory and performed essential maintenance to extend hardware lifespan.</li> <li>Improved user satisfaction by 40% through clear communication, technical guidance, and prompt issue resolution at the help desk.</li> <li>Collaborated with the IT team to monitor and address network and connectivity issues.</li>",
   },
   {
-    title: "Student Developer",
-    cardImage: "assets/images/experience-page/gsoc.png",
-    place: "Google Summer Of Code",
-    time: "(Mar - Aug, 2019)",
-    desp: "<li>Worked with MOZILLA as a part of Google Summer Of Code.</li><li>Worked on Extension Activity Monitor which is a privileged extension for Firefox that uses the activityLog API (privileged API) to monitor the activities of the other installed extensions.</li><li>The activityLog API listens for logs from other installed extensions.</li>",
+    title: "Software Engineer Intern",
+    cardImage: "assets/images/experience-page/Icon.png",
+    place: "JP Morgan | New York City, NY",
+    time: "(May 2024 - Aug, 2024)",
+    desp: "<li>Demonstrated proficiency in React.js, Java, MySQL, Docker, Jenkins, and Prometheus allowing me to efficiently contribute to the development of secure and scalable banking software solutions.</li><li>Developed responsive and intuitive user interfaces using JavaScript, HTML5, and CSS3, improving the customer-facing experience across platforms.</li><li>Integrated Prometheus for real-time monitoring, improving visibility into system health and reducing detection time for performance issues.</li> <li>Orchestrated the setup of automated testing frameworks within Jenkins CI/CD pipelines, enhancing application performance consistency and enabling continuous integration processes that supported 25+ successful deployments per month.</li><li>Applied Agile development methodologies to support iterative development and continuous delivery</li>",
   },
   {
-    title: "Research Intern",
-    cardImage: "assets/images/experience-page/IIT_Bombay.jpg",
-    place: "IIT, Bombay",
-    time: "(Dec, 19 - Jan, 20)",
-    desp: "<li>Worked on the project “LTI (Learning Tools Interoperability) 2.0 standards Implementation for ekShiksha.</li><li>Designed a software that would help faculty to create a quiz using the questions from the database based on his/her choice of topics and he should be provided with various facilities and options to create a quiz of his choice.</li>",
+    title: "Sales Advisor",
+    cardImage: "assets/images/experience-page/H&M-Logo.svg.png",
+    place: "H&M | Atlantic City, NJ",
+    time: "(July, 2022 - Present)",
+    desp: "<li>Delivered exceptional customer service by assisting shoppers with product selection and inquiries.</li><li>Developed strong communication and problem-solving skills in a fast-paced retail environment.</li><li>Collaborated with team members to achieve sales goals and maintain a positive shopping experience.</li>",
   },
 ];
 
@@ -57,34 +57,30 @@ const showCards2 = () => {
 };
 document.addEventListener("DOMContentLoaded", showCards2);
 
-// Volunteership Cards
+// Certifiations Cards
 
 const volunteership = document.querySelector(".volunteership");
 const volunteershipcards = [
   {
-    title: "GirlScript Summer Of Code 2020",
-    cardImage: "assets/images/experience-page/1.jpg",
+    title: "CompTIA Security+ Certification",
+    cardImage: "assets/images/experience-page/securityplus.jpeg",
     description:
-      "Responsible for handling the projects GirlScript App and GirlScript Website Boilerplate.",
+      "Certified in essential cybersecurity skills including risk management, threat detection, network security, and incident response. Meets U.S. DoD 8140/8570 requirements.",
   },
-  {
-    title: "StudentCode-in 2020",
-    cardImage: "assets/images/experience-page/2.jpg",
-    description:
-      "Responsible for handling open source contributions for the project Awesome Developer Portfolio.",
-  },
-  {
-    title: "PClub Summer Of Code 2020",
-    cardImage: "assets/images/experience-page/3.jpg",
-    description:
-      "Mentoring for the projects Deep Pixel, AutoVaidya, Just Resume and Doc2pen.",
-  },
-  {
-    title: "Hakin-Codes",
-    cardImage: "assets/images/experience-page/4.jpg",
-    description:
-      "Mentoring for the open source projects Deeppixel, Awesome Developer Portfolios and Doc2Pen.",
-  },
+
+  //{
+    //title: "CompTIA Security+ Certification",
+    //cardImage: "assets/images/experience-page/securityplus.jpeg",
+    //description:
+      //"Certified in essential cybersecurity skills including risk management, threat detection, network security, and incident response. Meets U.S. DoD 8140/8570 requirements.",
+  //},
+
+  //{
+    //title: "CompTIA Security+ Certification",
+    //cardImage: "assets/images/experience-page/securityplus.jpeg",
+    //description:
+      //"Certified in essential cybersecurity skills including risk management, threat detection, network security, and incident response. Meets U.S. DoD 8140/8570 requirements.",
+  //},
 ];
 
 const showCards = () => {
