@@ -1,83 +1,147 @@
-![Awesome Portfolio Website](./readme_assets/banner_apw.png)
+# Taszid Chowdhury's Portfolio Website
 
 <div align="center">
 
-<a href="https://github.com/smaranjitghose/awesome-portfolio-websites"><img src="https://badges.frapsoft.com/os/v1/open-source.svg?v=103"></a>
-<a href="https://github.com/smaranjitghose/awesome-portfolio-websites"><img src="https://img.shields.io/badge/Built%20by-developers%20%3C%2F%3E-0059b3"></a>
-<a href="https://github.com/smaranjitghose/awesome-portfolio-websites"><img src="https://img.shields.io/static/v1.svg?label=Contributions&message=Welcome&color=yellow"></a>
-<a href="https://github.com/smaranjitghose/"><img src="https://img.shields.io/badge/Maintained%3F-yes-brightgreen.svg?v=103"></a>
-<a href="https://github.com/smaranjitghose/awesome-portfolio-websites/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg?v=103"></a>
-
-<a href="https://github.com/smaranjitghose/awesome-portfolio-websites/graphs/contributors"><img src="https://img.shields.io/github/contributors/smaranjitghose/awesome-portfolio-websites?color=brightgreen"></a>
-<a href="https://github.com/smaranjitghose/awesome-portfolio-websites/stargazers"><img src="https://img.shields.io/github/stars/smaranjitghose/awesome-portfolio-websites?color=0059b3"></a>
-<a href="https://github.com/smaranjitghose/awesome-portfolio-websites/network/members"><img src="https://img.shields.io/github/forks/smaranjitghose/awesome-portfolio-websites?color=yellow"></a>
-<a href="https://github.com/smaranjitghose/awesome-portfolio-websites/issues"><img src="https://img.shields.io/github/issues/smaranjitghose/awesome-portfolio-websites?color=0059b3"></a>
-<a href="https://github.com/smaranjitghose/awesome-portfolio-websites/issues?q=is%3Aissue+is%3Aclosed"><img src="https://img.shields.io/github/issues-closed-raw/smaranjitghose/awesome-portfolio-websites?color=yellow"></a>
-<a href="https://github.com/smaranjitghose/awesome-portfolio-websites/pulls"><img src="https://img.shields.io/github/issues-pr/smaranjitghose/awesome-portfolio-websites?color=brightgreen"></a>
-<a href="https://github.com/smaranjitghose/awesome-portfolio-websites/pulls?q=is%3Apr+is%3Aclosed"><img src="https://img.shields.io/github/issues-pr-closed-raw/smaranjitghose/awesome-portfolio-websites?color=0059b3"></a>
+[![Website](https://img.shields.io/badge/Website-Live-brightgreen)](https://taszidchowdhury.com)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Analytics](https://img.shields.io/badge/Google%20Analytics-Enabled-blue)](https://analytics.google.com)
 
 </div>
 
-A community maintained open source project aimed at making personal portfolio for researchers, developers and analysts simple, fast and less cumbersome. We make sure you have a full-fledged website to showcase your work while you can spend time on your learning and innovative endeavours.
+## Overview
 
-## A sneak peek into what we have here🙈 :
+Welcome to my professional portfolio website! This platform serves as a comprehensive showcase of my professional journey, technical expertise, and creative endeavors. Built with modern web technologies and best practices, it provides an engaging and interactive experience for visitors.
 
-### Home Page:
+## Features & Sections
 
-<p align="center"><img src="./readme_assets/Home_Page.gif"></p>
+### 🏠 Home Page
+- Modern, responsive landing page with dynamic content
+- Professional introduction and key highlights
+- Interactive UI elements with smooth animations
+- Dark/Light mode toggle for enhanced user experience
 
-### Experience Page:
+### 💼 Experience
+- Detailed professional timeline
+- Skills matrix and proficiency levels
+- Work history with key achievements
+- Professional certifications and training
 
-<p align="center"><img src="./readme_assets/Experience_Page.gif"></p>
+### 🚀 Projects
+- Showcase of technical projects
+- Detailed project descriptions and technologies used
+- Live demos and GitHub repository links
+- Project categorization and filtering options
 
-### Project Page:
+### 📚 Research
+- Academic publications and papers
+- Research methodologies and findings
+- Conference presentations and talks
+- Research collaborations and contributions
 
-<p align="center"><img src="./readme_assets/Project_Page.gif"></p>
+### 🎓 Education
+- Academic qualifications and achievements
+- Coursework and specializations
+- Academic projects and thesis work
+- Continuing education and certifications
 
-### Research Page:
+### ✍️ Blog
+- Technical articles and tutorials
+- Industry insights and analysis
+- Personal development content
+- Interactive comment system
 
-<p align="center"><img src="./readme_assets/Research_Page.gif"></p>
+### 🎨 Design
+- UI/UX design portfolio
+- Creative projects showcase
+- Design process documentation
+- Visual design elements
 
-### Education Page:
+### 🛠 Tech Stack
+- Detailed breakdown of technical skills
+- Programming languages and frameworks
+- Tools and platforms expertise
+- Development methodologies
 
-<p align="center"><img src="./readme_assets/Education_Page.gif"></p>
+## Technical Implementation
 
-## How to use this?🛠
+### Frontend Technologies
+- **HTML5**: Semantic markup and modern structure
+- **CSS3**: Responsive design and animations
+- **JavaScript**: Interactive features and dynamic content
+- **Bootstrap 4**: Responsive grid system and components
+- **Font Awesome**: Icon library integration
+- **Google Fonts**: Custom typography with Poppins
 
-[Check out our awesome Documentation](https://smaranjitghose.github.io/awesome-portfolio-websites/)
+### Interactive Features
+- Dark/Light mode toggle
+- Smooth page transitions
+- Animated content loading
+- Responsive navigation
+- Dynamic content updates
+- Interactive project cards
 
-## Contribution Guidelines🏗
+### Performance & SEO
+- Optimized image loading
+- Minified CSS and JavaScript
+- Meta tags for SEO
+- Google Analytics integration
+- Mobile-first responsive design
+- Fast loading times
 
-Are we missing any of your favorite features, which you think you can add to it❓ We invite you to contribute to this project and improve it further.
+### Development Tools
+- **Google Analytics**: Visitor tracking and analytics
+- **Git**: Version control
+- **GitHub Pages**: Hosting and deployment
+- **Font Awesome**: Icon integration
+- **Academicons**: Academic icons
+- **AOS**: Animate On Scroll library
 
-Click on the image below to set up and contribute to the project or [Click here](https://github.com/smaranjitghose/awesome-portfolio-websites/blob/master/CONTRIBUTING.md)
+## Getting Started
 
-<a href = "https://github.com/smaranjitghose/awesome-portfolio-websites/blob/master/CONTRIBUTING.md">
-<img src = "./readme_assets/Contribution.png"></a>
+### Prerequisites
+- Modern web browser (Chrome, Firefox, Safari, Edge)
+- Internet connection
+- JavaScript enabled
 
-## Project Maintainers👨🏫:
+### Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/portfolio.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd portfolio
+   ```
+3. Open `index.html` in your browser
 
-| <img src = "https://avatars2.githubusercontent.com/u/46641503?v=4"> | <img src = "https://avatars2.githubusercontent.com/u/40017559?v=4"> | 
-| :----------------------------------------------------------: | :----------------------------------------------------------: | 
-|     [Smaranjit Ghose](https://github.com/smaranjitghose) |    [Anush Bhatia](https://github.com/anushbhatia)                       
+### Development
+- Edit HTML files for content updates
+- Modify CSS in `assets/css/` for styling changes
+- Update JavaScript in `assets/js/` for functionality
+- Add new images to `assets/images/`
 
+## Analytics & Tracking
 
-## Our valuable Contributors👩‍💻👨‍💻 :
+The website uses Google Analytics (ID: G-M11CMZ12Q) to track:
+- Visitor demographics
+- Page views and navigation
+- User engagement metrics
+- Traffic sources
+- Popular content
 
-<a href="https://github.com/smaranjitghose/awesome-portfolio-websites/graphs/contributors">
-  <img src="https://contributors-img.web.app/image?repo=smaranjitghose/awesome-portfolio-websites" />
-</a>
+## License
 
-## Open Source Programs we have been a part of:
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-<p align="center">
-<a href="https://scodein.tech/"><img src="./readme_assets/open_source_programs/sci.png" width= "25%"/></a>
-<a href="https://hakincodes.tech/"><img src="./readme_assets/open_source_programs/ch.png" width= "25%"/></a>
-<a href="https://njackwinterofcode.github.io/"><img src="./readme_assets/open_source_programs/nwoc.png" width= "25%" /></a>
-<a href="https://devscript.tech/woc/"><img src="./readme_assets/open_source_programs/dwoc.png" width="25%"></a>
-<a href="https://mexili.github.io/winter_of_code/#/"><img src="./readme_assets/open_source_programs/mwoc.png" width="25%"></a>
-<a href="https://crosswoc.ieeedtu.in/"><img src="./readme_assets/open_source_programs/crosswoc.png" width="25%"></a>
-<a href="https://letsgrowmore.in/soc/"><img src="./readme_assets/open_source_programs/lgmsoc.png" width="25%"></a>
-<a href="https://devincept.codes/"><img src="./readme_assets/open_source_programs/devincept.gif" width="25%"></a>
-<a href="https://ghc.anitab.org/programs-and-awards/open-source-day/"><img src="./readme_assets/open_source_programs/OSD.jpg" width="25%"></a>
-</p>
+## Contact & Connect
+
+Feel free to reach out through:
+- Email: taszidchowdhury@gmail.com
+- LinkedIn: [https://www.linkedin.com/in/taszid-chowdhury-42a37923b/]
+- GitHub: [https://github.com/TaszidChowdhury]
+
+---
+
+<div align="center">
+Made with ❤️ by Taszid Chowdhury
+</div>
