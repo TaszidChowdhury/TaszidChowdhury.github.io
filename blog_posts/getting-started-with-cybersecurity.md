@@ -3,9 +3,10 @@ title: "Getting Started with Cybersecurity"
 date: "2024-04-17"
 author: "Taszid Chowdhury"
 tags: ["cybersecurity", "beginners", "tutorial"]
-image: "assets/images/cybersecurity.jpg"
+image: "assets/images/blogs/cybersecurity.jpg"
 excerpt: "A comprehensive guide to beginning your journey in cybersecurity, covering essential concepts, tools, and best practices."
 ---
+<img src="assets/images/blogs/cybersecurity.jpg" alt="cybersecurity" />
 
 # Getting Started with Cybersecurity
 

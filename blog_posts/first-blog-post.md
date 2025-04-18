@@ -3,7 +3,7 @@ title: "First Blog Post"
 date: "2024-04-17"
 author: "Taszid Chowdhury"
 tags: ["Welcome", "To", "My", "Website"]
-image: "assets/images/Journey.jpg"
+image: "assets/images/blogs/Journey.jpg"
 excerpt: "The start of something excellent."
 ---
 "A journey of a thousand miles begins with a single step."
