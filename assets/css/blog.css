@@ -3,11 +3,13 @@
     padding: 4rem 0;
     background-color: var(--bg-color);
     min-height: 100vh;
+    width: 100%;
 }
 
 .section-head {
     text-align: center;
     margin-bottom: 4rem;
+    width: 100%;
 }
 
 .section-head h1 {
@@ -35,7 +37,8 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     gap: 2rem;
-    max-width: 1200px;
+    width: 95%;
+    max-width: 1400px;
     margin: 0 auto;
     padding: 0 1rem;
 }
@@ -178,7 +181,8 @@
 
 /* Blog Post Page */
 .blog-post {
-    max-width: 800px;
+    width: 95%;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 2rem;
     background: var(--card-bg);
@@ -204,7 +208,7 @@
 }
 
 .blog-post-header h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: 600;
     color: var(--text-color);
     margin-bottom: 1.5rem;
@@ -218,6 +222,7 @@
     gap: 2rem;
     margin-bottom: 1.5rem;
     color: var(--text-secondary);
+    font-size: 1.1rem;
 }
 
 .blog-post-meta span {
@@ -241,25 +246,34 @@
 .blog-post-content {
     line-height: 1.8;
     color: var(--text-color);
-    font-size: 1.1rem;
+    font-size: 1.2rem;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 .blog-post-content h2 {
-    font-size: 1.8rem;
+    font-size: 2rem;
     font-weight: 600;
     color: var(--text-color);
-    margin: 2.5rem 0 1.5rem;
+    margin: 3rem 0 1.5rem;
 }
 
 .blog-post-content h3 {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     font-weight: 600;
     color: var(--text-color);
-    margin: 2rem 0 1rem;
+    margin: 2.5rem 0 1rem;
 }
 
 .blog-post-content p {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.8rem;
+}
+
+.blog-post-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 2rem 0;
 }
 
 .blog-post-content a {
@@ -276,21 +290,22 @@
 
 .blog-post-content ul,
 .blog-post-content ol {
-    margin: 1.5rem 0;
-    padding-left: 2rem;
+    margin: 1.8rem 0;
+    padding-left: 2.5rem;
 }
 
 .blog-post-content li {
-    margin-bottom: 0.75rem;
+    margin-bottom: 1rem;
 }
 
 .blog-post-content blockquote {
-    margin: 2rem 0;
-    padding: 1.5rem 2rem;
+    margin: 2.5rem 0;
+    padding: 2rem 2.5rem;
     border-left: 4px solid var(--primary-color);
     background: var(--blockquote-bg);
-    border-radius: 5px;
+    border-radius: 8px;
     font-style: italic;
+    font-size: 1.1em;
 }
 
 .blog-post-content code {
@@ -306,7 +321,8 @@
     padding: 1.5rem;
     border-radius: 8px;
     overflow-x: auto;
-    margin: 1.5rem 0;
+    margin: 2rem 0;
+    width: 100%;
 }
 
 .blog-post-content pre code {
@@ -316,7 +332,8 @@
 
 .back-to-blog {
     text-align: center;
-    margin-top: 3rem;
+    margin-top: 4rem;
+    padding-bottom: 2rem;
 }
 
 .back-link {
@@ -330,6 +347,7 @@
     padding: 0.75rem 1.5rem;
     border: 2px solid var(--primary-color);
     border-radius: 25px;
+    font-size: 1.1rem;
 }
 
 .back-link:hover {
@@ -339,9 +357,20 @@
 }
 
 /* Responsive Design */
+@media (max-width: 1200px) {
+    .blog-post {
+        width: 90%;
+    }
+    
+    .blog-post-header h1 {
+        font-size: 2.5rem;
+    }
+}
+
 @media (max-width: 992px) {
     .blog-grid {
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        width: 90%;
     }
 }
 
@@ -359,6 +388,7 @@
     }
 
     .blog-post {
+        width: 95%;
         padding: 1.5rem;
     }
 
@@ -367,35 +397,33 @@
     }
 
     .blog-post-content {
-        font-size: 1rem;
+        font-size: 1.1rem;
+    }
+
+    .blog-post-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .blog-post-content h3 {
+        font-size: 1.5rem;
     }
 }
 
 @media (max-width: 576px) {
     .blog-grid {
         grid-template-columns: 1fr;
+        width: 100%;
+        padding: 0 1rem;
     }
 
     .section-head h1 {
         font-size: 2rem;
     }
 
-    .blog-card {
-        margin: 0 1rem;
-    }
-
-    .blog-image {
-        height: 200px;
-    }
-
-    .blog-title {
-        font-size: 1.3rem;
-    }
-
-    .blog-meta {
-        flex-direction: column;
-        gap: 0.5rem;
-        align-items: flex-start;
+    .blog-post {
+        width: 100%;
+        padding: 1.25rem;
+        border-radius: 0;
     }
 
     .blog-post-header h1 {
@@ -405,5 +433,14 @@
     .blog-post-meta {
         flex-direction: column;
         gap: 0.75rem;
+    }
+
+    .blog-post-content {
+        font-size: 1rem;
+    }
+
+    .blog-post-content blockquote {
+        padding: 1.5rem;
+        margin: 2rem 0;
     }
 } 

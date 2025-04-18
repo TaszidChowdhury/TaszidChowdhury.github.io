@@ -68,7 +68,8 @@ async function loadBlogPosts() {
     try {
         const blogPosts = [
             'getting-started-with-cybersecurity.md',
-            'first-blog-post.md'
+            'first-blog-post.md',
+            'Who-Am-I.md'
         ];
         
         const blogContainer = document.querySelector('#blog-content');
@@ -128,7 +129,8 @@ async function loadBlogPost() {
         // Map slugs to filenames
         const slugToFile = {
             'getting-started-with-cybersecurity': 'getting-started-with-cybersecurity.md',
-            'first-blog-post': 'first-blog-post.md'
+            'first-blog-post': 'first-blog-post.md',
+            'who-is-taszid-chowdhury': 'Who-Am-I.md'
         };
         
         const filename = slugToFile[postSlug];
