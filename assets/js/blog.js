@@ -66,39 +66,51 @@ function createSlug(title) {
 // Function to load and display blog posts
 async function loadBlogPosts() {
     try {
-        const response = await fetch('blog_posts/getting-started-with-cybersecurity.md');
-        const markdown = await response.text();
+        const blogPosts = [
+            'getting-started-with-cybersecurity.md',
+            'first-blog-post.md'
+        ];
         
-        const { metadata, content } = parseFrontmatter(markdown);
-        const slug = createSlug(metadata.title);
-        
-        // Create blog post card
-        const blogCard = document.createElement('div');
-        blogCard.className = 'blog-card';
-        blogCard.innerHTML = `
-            <div class="blog-image">
-                <img src="${metadata.image}" alt="${metadata.title}">
-            </div>
-            <div class="blog-content">
-                <h2 class="blog-title">${metadata.title}</h2>
-                <div class="blog-meta">
-                    <span class="date">${metadata.date}</span>
-                    <span class="author">By ${metadata.author}</span>
-                </div>
-                <div class="blog-tags">
-                    ${metadata.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
-                </div>
-                <p class="blog-excerpt">${metadata.excerpt}</p>
-                <a href="blog-post.html?post=${slug}" class="read-more">Read More</a>
-            </div>
-        `;
-        
-        // Add to the page
         const blogContainer = document.querySelector('#blog-content');
-        blogContainer.appendChild(blogCard);
+        blogContainer.innerHTML = ''; // Clear existing content
         
+        for (const postFile of blogPosts) {
+            try {
+                const response = await fetch(`blog_posts/${postFile}`);
+                const markdown = await response.text();
+                
+                const { metadata, content } = parseFrontmatter(markdown);
+                const slug = createSlug(metadata.title);
+                
+                // Create blog post card
+                const blogCard = document.createElement('div');
+                blogCard.className = 'blog-card';
+                blogCard.innerHTML = `
+                    <div class="blog-image">
+                        <img src="${metadata.image}" alt="${metadata.title}">
+                    </div>
+                    <div class="blog-content">
+                        <h2 class="blog-title">${metadata.title}</h2>
+                        <div class="blog-meta">
+                            <span class="date"><i class="far fa-calendar"></i> ${metadata.date}</span>
+                            <span class="author"><i class="far fa-user"></i> ${metadata.author}</span>
+                        </div>
+                        <div class="blog-tags">
+                            ${metadata.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+                        </div>
+                        <p class="blog-excerpt">${metadata.excerpt}</p>
+                        <a href="blog-post.html?post=${slug}" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                `;
+                
+                // Add to the page
+                blogContainer.appendChild(blogCard);
+            } catch (error) {
+                console.error(`Error loading blog post ${postFile}:`, error);
+            }
+        }
     } catch (error) {
-        console.error('Error loading blog post:', error);
+        console.error('Error loading blog posts:', error);
     }
 }
 
@@ -113,7 +125,18 @@ async function loadBlogPost() {
             return;
         }
         
-        const response = await fetch('blog_posts/getting-started-with-cybersecurity.md');
+        // Map slugs to filenames
+        const slugToFile = {
+            'getting-started-with-cybersecurity': 'getting-started-with-cybersecurity.md',
+            'first-blog-post': 'first-blog-post.md'
+        };
+        
+        const filename = slugToFile[postSlug];
+        if (!filename) {
+            throw new Error('Blog post not found');
+        }
+        
+        const response = await fetch(`blog_posts/${filename}`);
         const markdown = await response.text();
         
         const { metadata, content } = parseFrontmatter(markdown);
@@ -129,8 +152,8 @@ async function loadBlogPost() {
             <header class="blog-post-header">
                 <h1>${metadata.title}</h1>
                 <div class="blog-post-meta">
-                    <span class="date">${metadata.date}</span>
-                    <span class="author">By ${metadata.author}</span>
+                    <span class="date"><i class="far fa-calendar"></i> ${metadata.date}</span>
+                    <span class="author"><i class="far fa-user"></i> ${metadata.author}</span>
                 </div>
                 <div class="blog-post-tags">
                     ${metadata.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
@@ -143,10 +166,13 @@ async function loadBlogPost() {
         
         // Add to the page
         const blogContainer = document.querySelector('#blog-post-content');
+        blogContainer.innerHTML = ''; // Clear existing content
         blogContainer.appendChild(blogPost);
         
     } catch (error) {
         console.error('Error loading blog post:', error);
+        // Redirect to blog listing page if post not found
+        window.location.href = 'blog.html';
     }
 }
 
