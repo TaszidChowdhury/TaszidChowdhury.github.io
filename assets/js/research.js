@@ -12,6 +12,7 @@ const research = [
     researchYr: 2024,
     citebox: "popup1",
     image: "assets/images/research-page/PhysicalSecuritySmartHome.jpeg",
+    pdfLink: "assets/docs/PhysicalSecuritySmartHome.pdf",
     citation: {
       vancouver:
         "Azhar Alsufyani, Omer Rana, and Charith Perera. 2024. Knowledge-based Cyber Physical Security at Smart Home: A Review. ACM Comput. Surv. 57, 3, Article 53 (November 2024), 36 pages. https://doi.org/10.1145/3698768",
@@ -26,13 +27,14 @@ const research = [
     authors:
       "Gaurav Goyal, Peng Liu, Shamik Sural",
     conferences:
-      "SaT-CPS ’22, April 27, 2022, Baltimore, MD, USA",
+      "SaT-CPS '22, April 27, 2022, Baltimore, MD, USA",
     researchYr: 2022,
     citebox: "popup2",
     image: "assets/images/research-page/IOTCloud.jpg",
+    pdfLink: "assets/docs/IOTCloud.pdf",
     citation: {
       vancouver:
-        "Gaurav Goyal, Peng Liu, and Shamik Sural. 2022. Securing Smart Home IoTSystems with Attribute-Based Access Control. In Proceedings of the 2022ACM Workshop on Secure and Trustworthy Cyber-Physical Systems (SaT-CPS’22), April 27, 2022, Baltimore, MD, USA. ACM, New York, NY, USA, 10 pages. https://doi.org/10.1145/3510547.3517920",
+        "Gaurav Goyal, Peng Liu, and Shamik Sural. 2022. Securing Smart Home IoTSystems with Attribute-Based Access Control. In Proceedings of the 2022ACM Workshop on Secure and Trustworthy Cyber-Physical Systems (SaT-CPS'22), April 27, 2022, Baltimore, MD, USA. ACM, New York, NY, USA, 10 pages. https://doi.org/10.1145/3510547.3517920",
     },
     abstract:
       "With the rapid adoption of IoT technologies in smart homes, concerns over secure and fine-grained access control have become increasingly critical. While many existing systems offer basic device-level permissions, they often lack the flexibility and contextual awareness required for dynamic and secure access management. This paper introduces a novel framework that leverages Attribute-Based Access Control (ABAC) to enhance the security of smart home IoT environments. ABAC offers context-aware policy enforcement using user, device, and environmental attributes, enabling both coarse and fine-grained access decisions. The proposed framework integrates a policy store, enhanced IoT apps, and a centralized policy enforcer to implement rule-based decision-making without requiring deep modification to existing IoT infrastructures. A prototype was implemented on the SmartThings platform using AWS-hosted services, demonstrating effective policy enforcement with minimal performance overhead. Experimental results confirm the scalability and efficiency of the approach, offering a practical and privacy-preserving solution for real-world smart home deployments.e considered as a dummy data 2",
@@ -48,6 +50,7 @@ const research = [
     researchYr: 2023,
     citebox: "popup3",
     image: "assets/images/research-page/ISF.jpeg",
+    pdfLink: "assets/docs/ISF.pdf",
     citation: {
       vancouver:
         "Akashdeep Bhardwaj, Keshav Kaushik, Mohammed Alshehri, Ahmed Abo-Bakr Mohamed, and Ismail Keshta. 2023. ISF: Security Analysis and Assessment of Smart Home IoT-based Firmware. ACM Trans. Sen. Netw. Just Accepted (January 2023). https://doi.org/10.1145/3578363",
@@ -67,6 +70,7 @@ const research = [
     researchYr: 2024,
     citebox: "popup4",
     image: "assets/images/research-page/ReviewsSecurity.jpeg",
+    pdfLink: "assets/docs/ReviewsSecurity.pdf",
     citation: {
       vancouver:
         "Taufiq Islam Protick, Aafaq Sabir, SB Abhinaya, Aiden Bartlett, and Anupam Das. 2024. Unveiling Users Security and Privacy Concerns Regarding Smart Home IoT Products from Online Reviews. ACM J. Comput. Sustain. Soc.2, 4,Article 44(November 2024), 41pages. https://doi.org/10.1145/3685929",
@@ -84,12 +88,13 @@ const research = [
     researchYr: 2020,
     citebox: "popup5",
     image: "assets/images/research-page/LocationLocation.jpeg",
+    pdfLink: "assets/docs/Location, Location, Security? Exploring Location-Based Smart Device Security Concerns and Mitigations within Low-Rent Homes.pdf",
     citation: {
       vancouver:
-        "Laura Benton, Asimina Vasalou, and Sarah Turner. 2023. Location, Location, Security? Exploring Location-Based Smart Device Security Concerns and Mitigations within Low-Rent Homes. In Designing Interactive Systems Conference (DIS ’23), July 10–14, 2023, Pittsburgh, PA, USA. ACM, New York, NY, USA, 18 pages. https://doi.org/10.1145/3563657.3596077",
+        "Laura Benton, Asimina Vasalou, and Sarah Turner. 2023. Location, Location, Security? Exploring Location-Based Smart Device Security Concerns and Mitigations within Low-Rent Homes. In Designing Interactive Systems Conference (DIS '23), July 10–14, 2023, Pittsburgh, PA, USA. ACM, New York, NY, USA, 18 pages. https://doi.org/10.1145/3563657.3596077",
     },
     abstract:
-      "The increasing adoption of smart devices in the home introducenew security implications for tenants, with previous research showing the signifcance of where the devices are placed. This paper examines the relationship between device location and security: we ask how users’ security concerns shape where they place their smart devices and how they attempt to mitigate their concerns. The research focuses on an underrepresented group, those people living in social (low-rent) housing, motivated by the growing interest of housing providers to install smart devices within tenants’ homes. Using speculative design as a probe followed by interviews with eleven tenants, we fnd that security concerns are centred around ‘intimate places’, ‘social responsibility’ and ‘surveillance’ with users combining social practices and technical security features to miti-gate these. Our research contributes new ethical implications for deploying and designing smart home devices addressed to social housing providers and smart device designers.",
+      "The increasing adoption of smart devices in the home introducenew security implications for tenants, with previous research showing the signifcance of where the devices are placed. This paper examines the relationship between device location and security: we ask how users' security concerns shape where they place their smart devices and how they attempt to mitigate their concerns. The research focuses on an underrepresented group, those people living in social (low-rent) housing, motivated by the growing interest of housing providers to install smart devices within tenants' homes. Using speculative design as a probe followed by interviews with eleven tenants, we fnd that security concerns are centred around 'intimate places', 'social responsibility' and 'surveillance' with users combining social practices and technical security features to miti-gate these. Our research contributes new ethical implications for deploying and designing smart home devices addressed to social housing providers and smart device designers.",
     absbox: "absPopup5",
   },
 
@@ -160,6 +165,7 @@ const fillData = () => {
       citation,
       absbox,
       abstract,
+      pdfLink,
     }) =>
       (output += `
             <tr data-aos="zoom-in-left"> 
@@ -186,6 +192,10 @@ const fillData = () => {
                         <button class="button button-accent button-small text-right button-abstract " type="button" data-toggle="collapse" data-target="#${citebox}" aria-expanded="false" aria-controls="${citebox}">
                             CITE
                         </button>
+
+                        <a href="${pdfLink}" class="button button-accent button-small text-right button-abstract" download>
+                            <i class="fas fa-file-pdf"></i> PDF
+                        </a>
                     </div>
                     <div id="${absbox}" class="collapse" aria-labelledby="headingTwo" data-parent=".collapse">
                         <div class="card-body">
