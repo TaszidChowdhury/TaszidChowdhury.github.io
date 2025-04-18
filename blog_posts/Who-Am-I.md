@@ -9,7 +9,7 @@ excerpt: "The start of something excellent."
 
 # Who Am I?
 
-<img src="assets/images/ThisIsMe.jpg" alt="Taszid Chowdhury" style="width:200px; border-radius: 10px; display:block; margin:auto;" />
+<img src="assets/images/ThisIsMe.jpg" alt="Taszid Chowdhury"/>
 
 Hello! My name is Taszid Chowdhury, and I am passionate about technology, cybersecurity, and using computer science to solve real-world problems. I thrive on building meaningful projects, exploring new tools, and continuously learning in this ever-evolving tech landscape.
 
