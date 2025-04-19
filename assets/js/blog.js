@@ -66,6 +66,7 @@ function createSlug(title) {
 // Function to load and display blog posts
 async function loadBlogPosts() {
     try {
+        console.log('Starting to load blog posts...');
         const blogPosts = [
             'getting-started-with-cybersecurity.md',
             'first-blog-post.md',
@@ -73,14 +74,24 @@ async function loadBlogPosts() {
         ];
         
         const blogContainer = document.querySelector('#blog-content');
+        if (!blogContainer) {
+            console.error('Blog container not found!');
+            return;
+        }
         blogContainer.innerHTML = ''; // Clear existing content
         
         for (const postFile of blogPosts) {
             try {
-                const response = await fetch(`/taszidchowdhury.github.io/blog_posts/${postFile}`);
+                console.log(`Fetching blog post: ${postFile}`);
+                const response = await fetch(`../blog_posts/${postFile}`);
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
                 const markdown = await response.text();
+                console.log(`Successfully loaded ${postFile}`);
                 
                 const { metadata, content } = parseFrontmatter(markdown);
+                console.log('Metadata:', metadata);
                 const slug = createSlug(metadata.title);
                 
                 // Create blog post card
@@ -138,7 +149,7 @@ async function loadBlogPost() {
             throw new Error('Blog post not found');
         }
         
-        const response = await fetch(`/taszidchowdhury.github.io/blog_posts/${filename}`);
+        const response = await fetch(`../blog_posts/${filename}`);
         const markdown = await response.text();
         
         const { metadata, content } = parseFrontmatter(markdown);
