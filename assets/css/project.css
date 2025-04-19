@@ -169,20 +169,17 @@ a:hover {
   list-style-type: none;
   position: absolute;
   right: 0;
-}
-
-.card .menu-content::before,
-.card .menu-content::after {
-  content: "";
-  display: table;
-}
-
-.card .menu-content::after {
-  clear: both;
+  padding: 0;
+  margin: 0;
 }
 
 .card .menu-content li {
   display: inline-block;
+  margin-right: 10px;
+}
+
+.card .menu-content li:last-child {
+  margin-right: 0;
 }
 
 .card .wrapper {
@@ -203,8 +200,9 @@ a:hover {
   position: absolute;
   bottom: 0;
   width: 100%;
+  transform: translateY(calc(70px + 1em));
   transition: transform 0.3s;
-  background: rgba(0, 0, 0, 0.55);
+  background: rgba(0, 0, 0, 0.75);
 }
 
 @media (min-width: 60rem) {
@@ -372,8 +370,39 @@ ul {
   padding-inline-start: 0px;
 }
 
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-3px);
+}
+
 .social-icon svg {
-  margin-top: 30px;
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: #fff;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.card .title a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.card .title a:hover {
+  color: #bb86fc;
 }
 
 .menu-content {
