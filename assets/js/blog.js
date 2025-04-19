@@ -29,6 +29,12 @@ function parseFrontmatter(content) {
     return { metadata: {}, content };
 }
 
+// Function to get the base URL for assets and blog posts
+function getBaseUrl() {
+    const isGitHubPages = window.location.hostname.includes('github.io');
+    return isGitHubPages ? '/taszidchowdhury.github.io' : '';
+}
+
 // Function to convert markdown to HTML
 function convertMarkdownToHTML(markdown) {
     // Convert headers
@@ -80,7 +86,7 @@ async function loadBlogPosts() {
         }
         blogContainer.innerHTML = ''; // Clear existing content
         
-        const baseUrl = window.location.pathname.includes('github.io') ? '/taszidchowdhury.github.io' : '';
+        const baseUrl = getBaseUrl();
         
         for (const postFile of blogPosts) {
             try {
@@ -96,12 +102,18 @@ async function loadBlogPosts() {
                 console.log('Metadata:', metadata);
                 const slug = createSlug(metadata.title);
                 
+                // Adjust image path if it's relative
+                let imagePath = metadata.image;
+                if (imagePath && !imagePath.startsWith('http') && !imagePath.startsWith('/')) {
+                    imagePath = `${baseUrl}/${imagePath}`;
+                }
+                
                 // Create blog post card
                 const blogCard = document.createElement('div');
                 blogCard.className = 'blog-card';
                 blogCard.innerHTML = `
                     <div class="blog-image">
-                        <img src="${metadata.image}" alt="${metadata.title}">
+                        <img src="${imagePath}" alt="${metadata.title}">
                     </div>
                     <div class="blog-content">
                         <h2 class="blog-title">${metadata.title}</h2>
@@ -139,7 +151,7 @@ async function loadBlogPost() {
             return;
         }
         
-        const baseUrl = window.location.pathname.includes('github.io') ? '/taszidchowdhury.github.io' : '';
+        const baseUrl = getBaseUrl();
         
         // Map slugs to filenames
         const slugToFile = {
@@ -160,10 +172,15 @@ async function loadBlogPost() {
         const markdown = await response.text();
         
         const { metadata, content } = parseFrontmatter(markdown);
-        const htmlContent = convertMarkdownToHTML(content);
+        let htmlContent = convertMarkdownToHTML(content);
         
         // Update page title
         document.title = `${metadata.title} | Taszid Chowdhury`;
+        
+        // Adjust image paths in the content
+        if (baseUrl) {
+            htmlContent = htmlContent.replace(/(src=["'])((?!http|\/)[^"']+)(["'])/g, `$1${baseUrl}/$2$3`);
+        }
         
         // Create blog post container
         const blogPost = document.createElement('article');
