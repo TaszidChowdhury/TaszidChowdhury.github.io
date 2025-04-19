@@ -15,11 +15,11 @@ Hello! My name is Taszid Chowdhury, and I am passionate about technology, cybers
 
 ## Background
 
-I grew up in Atlantic City NJ, where I developed a love for exploring how things work—from tinkering with gadgets to diving into code. Over the years, I have honed my skills in Python, Java, cybersecurity fundamentals, and cloud infrastructure, which has led me to pursue a Bachelor of Science in Computer Science at Stockton University. I’ve worked on various academic and personal projects, including setting up a secure VPC on AWS and collaborating on a penetration testing report. 
+I grew up in Atlantic City NJ, where I developed a love for exploring how things work—from tinkering with gadgets to diving into code. Over the years, I have honed my skills in Python, Java, cybersecurity fundamentals, and cloud infrastructure, which has led me to pursue a Bachelor of Science in Computer Science at Stockton University. I've worked on various academic and personal projects, including setting up a secure VPC on AWS and collaborating on a penetration testing report. 
 
 ## Interests
 
-When I'm not working, I enjoy traveling, going to the gym, boxing, and coding mods for games like Minecraft, Skyrim, and Stardew Valley. I find it fascinating how vibrant communities can come together to enhance games and build entirely new worlds. I’m also a fan of reverse engineering game mechanics just to see how far I can push the limits of what’s possible
+When I'm not working, I enjoy traveling, going to the gym, boxing, and coding mods for games like Minecraft, Skyrim, and Stardew Valley. I find it fascinating how vibrant communities can come together to enhance games and build entirely new worlds. I'm also a fan of reverse engineering game mechanics just to see how far I can push the limits of what's possible
 
 ## Goals
 

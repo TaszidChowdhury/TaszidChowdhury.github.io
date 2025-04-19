@@ -80,10 +80,12 @@ async function loadBlogPosts() {
         }
         blogContainer.innerHTML = ''; // Clear existing content
         
+        const baseUrl = window.location.pathname.includes('github.io') ? '/taszidchowdhury.github.io' : '';
+        
         for (const postFile of blogPosts) {
             try {
                 console.log(`Fetching blog post: ${postFile}`);
-                const response = await fetch(`../blog_posts/${postFile}`);
+                const response = await fetch(`${baseUrl}/blog_posts/${postFile}`);
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
                 }
@@ -137,6 +139,8 @@ async function loadBlogPost() {
             return;
         }
         
+        const baseUrl = window.location.pathname.includes('github.io') ? '/taszidchowdhury.github.io' : '';
+        
         // Map slugs to filenames
         const slugToFile = {
             'getting-started-with-cybersecurity': 'getting-started-with-cybersecurity.md',
@@ -149,7 +153,10 @@ async function loadBlogPost() {
             throw new Error('Blog post not found');
         }
         
-        const response = await fetch(`../blog_posts/${filename}`);
+        const response = await fetch(`${baseUrl}/blog_posts/${filename}`);
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
         const markdown = await response.text();
         
         const { metadata, content } = parseFrontmatter(markdown);
