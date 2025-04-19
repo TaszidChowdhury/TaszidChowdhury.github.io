@@ -1,32 +1,40 @@
 // Function to parse frontmatter from markdown content
 function parseFrontmatter(content) {
-    const frontmatterRegex = /^---\n([\s\S]*?)\n---/;
-    const match = content.match(frontmatterRegex);
-    
-    if (match) {
-        const frontmatter = match[1];
-        const metadata = {};
+    try {
+        console.log('Parsing frontmatter from content:', content.substring(0, 100) + '...');
+        const frontmatterRegex = /^---\n([\s\S]*?)\n---/;
+        const match = content.match(frontmatterRegex);
         
-        frontmatter.split('\n').forEach(line => {
-            const [key, ...valueParts] = line.split(':');
-            if (key && valueParts.length > 0) {
-                const value = valueParts.join(':').trim();
-                // Handle arrays and strings
-                if (value.startsWith('[') && value.endsWith(']')) {
-                    metadata[key.trim()] = JSON.parse(value);
-                } else {
-                    metadata[key.trim()] = value.replace(/^["']|["']$/g, '');
+        if (match) {
+            const frontmatter = match[1];
+            const metadata = {};
+            
+            frontmatter.split('\n').forEach(line => {
+                const [key, ...valueParts] = line.split(':');
+                if (key && valueParts.length > 0) {
+                    const value = valueParts.join(':').trim();
+                    // Handle arrays and strings
+                    if (value.startsWith('[') && value.endsWith(']')) {
+                        metadata[key.trim()] = JSON.parse(value);
+                    } else {
+                        metadata[key.trim()] = value.replace(/^["']|["']$/g, '');
+                    }
                 }
-            }
-        });
+            });
+            
+            console.log('Parsed metadata:', metadata);
+            return {
+                metadata,
+                content: content.replace(frontmatterRegex, '').trim()
+            };
+        }
         
-        return {
-            metadata,
-            content: content.replace(frontmatterRegex, '').trim()
-        };
+        console.error('No frontmatter found in content');
+        return { metadata: {}, content };
+    } catch (error) {
+        console.error('Error parsing frontmatter:', error);
+        return { metadata: {}, content };
     }
-    
-    return { metadata: {}, content };
 }
 
 // Function to get the base URL for assets and blog posts
@@ -62,11 +70,21 @@ function convertMarkdownToHTML(markdown) {
 
 // Function to create a URL-friendly slug from a title
 function createSlug(title) {
-    return title.toLowerCase()
-        .replace(/[^\w\s-]/g, '')
-        .replace(/\s+/g, '-')
-        .replace(/-+/g, '-')
-        .trim();
+    if (!title) {
+        console.error('No title provided to createSlug');
+        return '';
+    }
+    try {
+        return title.toString()
+            .toLowerCase()
+            .replace(/[^\w\s-]/g, '')    // Remove special characters
+            .replace(/\s+/g, '-')         // Replace spaces with hyphens
+            .replace(/-+/g, '-')          // Replace multiple hyphens with single hyphen
+            .trim();                      // Remove leading/trailing spaces/hyphens
+    } catch (error) {
+        console.error('Error creating slug from title:', title, error);
+        return '';
+    }
 }
 
 // Function to load and display blog posts
@@ -99,8 +117,15 @@ async function loadBlogPosts() {
                 console.log(`Successfully loaded ${postFile}`);
                 
                 const { metadata, content } = parseFrontmatter(markdown);
-                console.log('Metadata:', metadata);
+                console.log('Parsed metadata:', metadata);
+                
+                if (!metadata.title) {
+                    console.error(`No title found in metadata for ${postFile}`);
+                    continue;
+                }
+                
                 const slug = createSlug(metadata.title);
+                console.log(`Created slug: ${slug} from title: ${metadata.title}`);
                 
                 // Adjust image path if it's relative
                 let imagePath = metadata.image;
@@ -122,9 +147,9 @@ async function loadBlogPosts() {
                             <span class="author"><i class="far fa-user"></i> ${metadata.author}</span>
                         </div>
                         <div class="blog-tags">
-                            ${metadata.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+                            ${metadata.tags ? metadata.tags.map(tag => `<span class="tag">${tag}</span>`).join('') : ''}
                         </div>
-                        <p class="blog-excerpt">${metadata.excerpt}</p>
+                        <p class="blog-excerpt">${metadata.excerpt || ''}</p>
                         <a href="blog-post.html?post=${slug}" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
                     </div>
                 `;
