@@ -39,8 +39,10 @@ function parseFrontmatter(content) {
 
 // Function to get the base URL for assets and blog posts
 function getBaseUrl() {
-    const isGitHubPages = window.location.hostname.includes('github.io');
-    return isGitHubPages ? '/taszidchowdhury.github.io' : '';
+    if (window.location.hostname.includes('github.io')) {
+        return '/taszidchowdhury.github.io';
+    }
+    return '';
 }
 
 // Function to convert markdown to HTML
@@ -105,16 +107,19 @@ async function loadBlogPosts() {
         blogContainer.innerHTML = ''; // Clear existing content
         
         const baseUrl = getBaseUrl();
+        console.log('Base URL:', baseUrl);
         
         for (const postFile of blogPosts) {
             try {
-                console.log(`Fetching blog post: ${postFile}`);
-                const response = await fetch(`${baseUrl}/blog_posts/${postFile}`);
+                const postUrl = `${baseUrl}/blog_posts/${postFile}`;
+                console.log(`Fetching blog post from: ${postUrl}`);
+                
+                const response = await fetch(postUrl);
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
                 }
                 const markdown = await response.text();
-                console.log(`Successfully loaded ${postFile}`);
+                console.log(`Successfully loaded ${postFile}, content length: ${markdown.length}`);
                 
                 const { metadata, content } = parseFrontmatter(markdown);
                 console.log('Parsed metadata:', metadata);
@@ -132,13 +137,14 @@ async function loadBlogPosts() {
                 if (imagePath && !imagePath.startsWith('http') && !imagePath.startsWith('/')) {
                     imagePath = `${baseUrl}/${imagePath}`;
                 }
+                console.log('Image path:', imagePath);
                 
                 // Create blog post card
                 const blogCard = document.createElement('div');
                 blogCard.className = 'blog-card';
                 blogCard.innerHTML = `
                     <div class="blog-image">
-                        <img src="${imagePath}" alt="${metadata.title}">
+                        <img src="${imagePath}" alt="${metadata.title}" onerror="console.error('Failed to load image:', this.src);">
                     </div>
                     <div class="blog-content">
                         <h2 class="blog-title">${metadata.title}</h2>
@@ -150,12 +156,13 @@ async function loadBlogPosts() {
                             ${metadata.tags ? metadata.tags.map(tag => `<span class="tag">${tag}</span>`).join('') : ''}
                         </div>
                         <p class="blog-excerpt">${metadata.excerpt || ''}</p>
-                        <a href="blog-post.html?post=${slug}" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                        <a href="${baseUrl}/blog-post.html?post=${slug}" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
                     </div>
                 `;
                 
                 // Add to the page
                 blogContainer.appendChild(blogCard);
+                console.log(`Added blog card for ${postFile}`);
             } catch (error) {
                 console.error(`Error loading blog post ${postFile}:`, error);
             }
@@ -177,6 +184,7 @@ async function loadBlogPost() {
         }
         
         const baseUrl = getBaseUrl();
+        console.log('Base URL:', baseUrl);
         
         // Map slugs to filenames
         const slugToFile = {
@@ -190,11 +198,15 @@ async function loadBlogPost() {
             throw new Error('Blog post not found');
         }
         
-        const response = await fetch(`${baseUrl}/blog_posts/${filename}`);
+        const postUrl = `${baseUrl}/blog_posts/${filename}`;
+        console.log(`Fetching blog post from: ${postUrl}`);
+        
+        const response = await fetch(postUrl);
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
         const markdown = await response.text();
+        console.log(`Successfully loaded ${filename}, content length: ${markdown.length}`);
         
         const { metadata, content } = parseFrontmatter(markdown);
         let htmlContent = convertMarkdownToHTML(content);
@@ -203,9 +215,7 @@ async function loadBlogPost() {
         document.title = `${metadata.title} | Taszid Chowdhury`;
         
         // Adjust image paths in the content
-        if (baseUrl) {
-            htmlContent = htmlContent.replace(/(src=["'])((?!http|\/)[^"']+)(["'])/g, `$1${baseUrl}/$2$3`);
-        }
+        htmlContent = htmlContent.replace(/(src=["'])((?!http|\/)[^"']+)(["'])/g, `$1${baseUrl}/$2$3`);
         
         // Create blog post container
         const blogPost = document.createElement('article');
@@ -218,7 +228,7 @@ async function loadBlogPost() {
                     <span class="author"><i class="far fa-user"></i> ${metadata.author}</span>
                 </div>
                 <div class="blog-post-tags">
-                    ${metadata.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+                    ${metadata.tags ? metadata.tags.map(tag => `<span class="tag">${tag}</span>`).join('') : ''}
                 </div>
             </header>
             <div class="blog-post-content">
@@ -228,8 +238,13 @@ async function loadBlogPost() {
         
         // Add to the page
         const blogContainer = document.querySelector('#blog-post-content');
+        if (!blogContainer) {
+            console.error('Blog post container not found!');
+            return;
+        }
         blogContainer.innerHTML = ''; // Clear existing content
         blogContainer.appendChild(blogPost);
+        console.log('Blog post rendered successfully');
         
     } catch (error) {
         console.error('Error loading blog post:', error);
@@ -240,6 +255,7 @@ async function loadBlogPost() {
 
 // Load appropriate content based on the current page
 document.addEventListener('DOMContentLoaded', () => {
+    console.log('Page loaded, current path:', window.location.pathname);
     if (window.location.pathname.includes('blog-post.html')) {
         loadBlogPost();
     } else {

@@ -1,0 +1,44 @@
+# Site settings
+title: Taszid Chowdhury
+email: your-email@example.com
+description: >-
+  Taszid Chowdhury's personal portfolio and blog.
+baseurl: "/taszidchowdhury.github.io" # the subpath of your site
+url: "https://taszidchowdhury.github.io" # the base hostname & protocol
+github_username: taszidchowdhury
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Blog settings
+blog_dir: blog_posts
+permalink: /blog/:title/
+
+# Collections
+collections:
+  blog_posts:
+    output: true
+    permalink: /blog/:title/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "blog_posts"
+    values:
+      layout: "post"
+      author: "Taszid Chowdhury"
+
+# Exclude from processing
+exclude:
+  - .git/
+  - .github/
+  - node_modules/
+  - vendor/
+  - README.md
+  - LICENSE
+  - Gemfile
+  - Gemfile.lock 
