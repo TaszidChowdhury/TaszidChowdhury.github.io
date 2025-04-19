@@ -77,7 +77,7 @@ async function loadBlogPosts() {
         
         for (const postFile of blogPosts) {
             try {
-                const response = await fetch(`blog_posts/${postFile}`);
+                const response = await fetch(`/taszidchowdhury.github.io/blog_posts/${postFile}`);
                 const markdown = await response.text();
                 
                 const { metadata, content } = parseFrontmatter(markdown);
@@ -138,7 +138,7 @@ async function loadBlogPost() {
             throw new Error('Blog post not found');
         }
         
-        const response = await fetch(`blog_posts/${filename}`);
+        const response = await fetch(`/taszidchowdhury.github.io/blog_posts/${filename}`);
         const markdown = await response.text();
         
         const { metadata, content } = parseFrontmatter(markdown);
