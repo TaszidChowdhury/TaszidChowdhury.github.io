@@ -8,7 +8,7 @@ const projects = [
   {
     title: "Virtual Private Cloud (VPC)",
     cardImage: "assets/images/project-page/AwsVPC.png",
-    description: "A quiz app built using basic react.",
+    description: "A comprehensive AWS VPC implementation project that demonstrates network architecture design, security groups configuration, and subnet management. Includes hands-on experience with AWS services like EC2, RDS, and Route 53 for a complete cloud infrastructure setup.",
     tagimg: "https://cdn.iconscout.com/icon/free/png-512/react-1-282599.png",
     Previewlink: "https://github.com/TaszidChowdhury/Virtual-Private-Cloud-VPC-",
     Githublink: "https://github.com/TaszidChowdhury/Virtual-Private-Cloud-VPC-",
@@ -16,7 +16,7 @@ const projects = [
   {
     title: "Pokemon The Card Game In Python",
     cardImage: "assets/images/project-page/PokemonTCGImage.jpg",
-    description: "A chess engine for a popular game dev engine.",
+    description: "A Python-based implementation of the popular Pokemon Trading Card Game featuring turn-based gameplay, card management, and strategic combat mechanics. Includes AI opponents, deck building functionality, and a user-friendly interface.",
     tagimg: "https://image.flaticon.com/icons/png/512/643/643350.png",
     Previewlink: "https://github.com/TaszidChowdhury/Pokemon_TCG_Game",
     Githublink: "https://github.com/TaszidChowdhury/Pokemon_TCG_Game",
@@ -24,7 +24,7 @@ const projects = [
   {
     title: "Penetration Testing Project",
     cardImage: "assets/images/project-page/pentest.png",
-    description: "Penetration testing project",
+    description: "A comprehensive penetration testing project that covers vulnerability assessment, network scanning, and security testing methodologies. Includes practical demonstrations of common security tools and techniques for identifying and mitigating security risks.",
     tagimg: "https://cdn.iconscout.com/icon/free/png-512/react-1-282599.png",
     Previewlink: "https://github.com/TaszidChowdhury/Penetration-Testing",
     Githublink: "https://github.com/TaszidChowdhury/Penetration-Testing",
@@ -32,16 +32,15 @@ const projects = [
   {
     title: "Financial Planner Website",
     cardImage: "assets/images/project-page/financialplan.jpg",
-    description: "Financial planner website",
+    description: "A full-stack web application for personal financial planning featuring budget tracking, expense management, and investment portfolio analysis. Includes interactive charts, goal setting features, and financial forecasting tools.",
     tagimg: "https://miro.medium.com/max/2800/0*U2DmhXYumRyXH6X1.png",
     Previewlink: "https://github.com/TaszidChowdhury/Financial-Planner-Website-FUNI-",
     Githublink: "https://github.com/TaszidChowdhury/Financial-Planner-Website-FUNI-",
   },
-
   {
     title: "Rental Property Website",
     cardImage: "assets/images/project-page/rental-property.jpeg",
-    description: "Rental property website",
+    description: "A property management web platform that facilitates rental property listings, tenant management, and lease tracking. Features include property search, virtual tours, online applications, and automated rent collection.",
     tagimg: "https://miro.medium.com/max/816/1*mn6bOs7s6Qbao15PMNRyOA.png",
     Previewlink: "https://github.com/TaszidChowdhury/Software_Engineering",
     Githublink: "https://github.com/TaszidChowdhury/Software_Engineering",
@@ -49,7 +48,7 @@ const projects = [
   {
     title: "Probability & Statistics Project",
     cardImage: "assets/images/project-page/prob&stat.jpeg",
-    description: "Probability & Statistics Project",
+    description: "A data analysis project focusing on probability distributions and statistical modeling. Includes implementations of various statistical tests, data visualization techniques, and predictive modeling using real-world datasets.",
     tagimg: "https://cdn.iconscout.com/icon/free/png-512/react-1-282599.png",
     Previewlink: "https://github.com/TaszidChowdhury/Probability-StatisticProject2",
     Githublink: "https://github.com/TaszidChowdhury/Probability-StatisticProject2",
@@ -106,7 +105,7 @@ const projects = [
 // function for rendering project cards data
 const showCards = () => {
   let output = "";
-  projects.forEach(({ title, cardImage, Previewlink, Githublink }) => {
+  projects.forEach(({ title, cardImage, description, Previewlink, Githublink }) => {
     output += `       
         <div class="column skill-card card" style="margin: 15px"data-aos="zoom-in-up" data-aos-easing="linear" data-aos-delay="300" data-aos-duration="600" >
           <div class="wrapper" style="background: url(${cardImage}) center / cover no-repeat;">
@@ -114,9 +113,11 @@ const showCards = () => {
             </div>
             <div class="data">
               <div class="content">
-              <div class="title-div">
-                <h1 class="title"><a href="#">${title}</a></h1>
-                </div>
+              <div class="title-div" style="display: flex; align-items: center; justify-content: space-between;">
+                <h1 class="title"><a href="${Githublink}" target="_blank">${title}</a></h1>
+                <a href="${Githublink}" target="_blank" style="margin-left: 10px;"><i class="fab fa-github" style="font-size: 20px;"></i></a>
+              </div>
+              <p class="description" style="color: #fff; margin-top: 10px; font-size: 14px;">${description}</p>
             <ul class="menu-content"><br>
                   <li><a href="${Previewlink}" class="social-icon"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="25" viewBox="0 0 30 28" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-monitor"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg></a></li>
                   <li><a href="${Githublink}" class="social-icon"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="25" viewBox="0 0 30 28" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a></li>
