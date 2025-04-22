@@ -74,7 +74,6 @@ var cursor = {
 
     // Change position of cursor with scrolling
     document.addEventListener('scroll', function (e) {
-
       if (self.lastScrolledLeft != $(document).scrollLeft()) {
         self.endX -= self.lastScrolledLeft;
         self.lastScrolledLeft = $(document).scrollLeft();
@@ -87,7 +86,6 @@ var cursor = {
       }
       self.$dot.style.top = self.endY + "px";
       self.$dot.style.left = self.endX + "px";
-
     });
   },
 
